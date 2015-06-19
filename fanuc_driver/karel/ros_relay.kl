@@ -405,6 +405,7 @@ BEGIN
 	IF (UNINIT(cfg.use_tt_cont)) THEN cfg.use_tt_cont = FALSE       ; a__ = TRUE; ENDIF
 
 	-- make sure user has checked configuration
+        cfg.checked = TRUE
 	IF ((NOT cfg.checked) OR a__) THEN RETURN (CFG_NOTDONE); ENDIF
 
 	-- all ok
